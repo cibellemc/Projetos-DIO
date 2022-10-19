@@ -3,19 +3,20 @@
     <head>
         <meta charset="utf-8">
         <title>Cibelle Maciel</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header> <!--cabeçalho -->
             <img src="menina.png" alt="Avatar de menina com cabelo cacheado">
-            <h1>Cibelle Maciel</h1> <!--título da página -->
+            <h1 id="tittle">Cibelle Maciel</h1> <!--título da página -->
         </header>
         <section> <!-- irá representar a lista de post -->
             <header>
-                <h2>Posts</h2>
+                <h2 class="subtitle">Posts</h2>
             </header>
-            <article>
+            <article class="post">
                 <header>
-                    <h3>Post #1</h3>
+                    <h3 class="post_tittle">Post #1</h3>
                     <img src="html-code-image.jpg" alt="Editor de texto contendo código HTML">
                 </header>
                 <p>
@@ -23,6 +24,19 @@
                 </p>
             </article>
         </section>
-        <footer></footer> <!-- no futuro trará a lista de contatos -->
+        <footer>
+            <ul> <!-- se trocar por ol fica numerada-->
+                <li>
+                    <a href="mailto:" target="_blank">cibellemaciel02@gmail.com</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/cibelle-maciel-8b750b227/" target="_blank">LinkedIn</a>
+                </li>
+                <li>
+                    <a href="https://github.com/cibellemc" target="_blank">GitHub</a>
+                </li>
+
+            </ul>
+        </footer> <!-- no futuro trará a lista de contatos -->
     </body>
 </html>
