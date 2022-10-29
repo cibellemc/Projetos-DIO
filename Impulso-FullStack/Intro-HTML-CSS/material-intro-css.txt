@@ -55,7 +55,7 @@ A primeira forma é pelo nome da cor em inglês, a segunda é pelo código hexad
 
 
 Border
-Vimos que a propriedade border pode ter 3 valores: a largura, a cor e o estilo, mas existem algumas particularidades nisso.
+Vimos que a propriedade border pode ter 3 valores: a largura (width - em px), a cor (color - nome em inglês ou hexadecimal) e o estilo (style), mas existem algumas particularidades nisso.
 A largura pode ser usada com várias unidades, como px, em e mm. A cor pode ser atribuída pelo nome ou por um código hexadecimal, assim como fizemos com o background, e o estilo é representada por palavras-chave, vamos ver algumas delas:
 
 solid: mostra uma borda simples e reta;
@@ -68,17 +68,25 @@ E se você não quiser usar a propriedade border existem as propriedade específ
 E depois disso podemos juntar os lados com os aspectos de uma borda e criar uma regra mais específica ainda.
 
  
+Ordem:
+topo (top), direita (right), inferior (bottom), esquerda (left)
+Se colocar só uma medida, vai ser aplicado a todos os lados. Ex: border: 3px solid blue;
+Se colocar duas medidas, vai ser topo/inferior (eixo y), direita/esquerda (eixo x). Ex: border-radius: 10% 20%
+Pode colocar especificando lados:  Ex: border-top: 2px dotted green;
+
 
 Border-radius
 E a última propriedade é o border-radius, ele permite arredondar os cantos de um elemento. Podemos usar várias unidades, mas as mais comuns são os pixels e a porcentagem.
 Colocando apenas um valor mudamos todos os cantos do elemento, mas seguindo aquela mesma ordem que vimos no padding e margin - topo, direita, inferior e esquerda -  conseguimos alterar cada canto separadamente.
+
+Se você tem um elemento quadrado, botando o radius em 50%, se torna um círculo
 
  
 Estilizando textos
 
 font-family
 Com o font-family podemos alterar a fonte dos nossos textos, como uma fonte da internet ou uma que esteja instalada no nosso computador, mas vamos nos ater às fontes seguras, chamadas de web safe fonts.
-Essas fontes são chamadas assim pois são encontradas em quases todos os sistemas e podem ser usadas sem preocupação.
+Essas fontes são chamadas assim pois são encontradas em quases todos os sistemas e podem ser usadas sem preocupação. Podem ser passadas duas, a segunda como backup caso a primeira não funcione
 
 font-size
 O font-size nos ajuda a mudar o tamanho do texto, existem algumas unidades de medida para ele mas por enquanto os pixels são suficientes para nós.
@@ -86,6 +94,31 @@ O font-size nos ajuda a mudar o tamanho do texto, existem algumas unidades de me
 font-style
 Usamos o font-style para tornar um texto itálico, na maioria das vezes você usará apenas o valor italic para ele, mas se precisar tirar o itálico de um texto você pode usar o valor normal.
 
- 
- 
+font-weight
+Altera o peso do texto. Pode ser normal, bold (negrito)
 
+text-transform
+uppercase (todo o texto em caixa alta)
+lowercase (todo o texto em caixa baixa)
+capitalize (todas as primeiras letras de cada palavra em maiúsculo)
+
+text-decoration: coloca linhas
+underline (abaixo da palavra - sublinhado)
+overline (acima da palavra)
+line-through (através, ao centro)
+
+Estilizando listas 
+
+list-style-type: square (quadrado)
+list-style-type: upper-roman (algarismo romano maiúsculo)
+list-style-type: "\1F44D" (alterando para um símbolo - emoji de joinha)
+list-style-image: url("rocket.png"); 
+list-style-type: none; // remove marcadores
+
+Dimensão e alinhamento
+width: largura. pode ser em px ou %
+height: altura
+max width: largura máxima. pode se ajustar dependendo da situação
+max height: altura máxima
+margin: alinhar elemento automaticamente
+text align: alinhar o texto ao centro (center), left (esquerda), right (direita), justificado (justify)

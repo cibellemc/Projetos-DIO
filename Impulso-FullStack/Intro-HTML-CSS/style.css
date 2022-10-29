@@ -1,19 +1,61 @@
 body{
-    background: #ccc;
+    background: §7§7§7;
+    font-family: Verdana;
+    max-width: 900px; /*até 900px, mas se a imagem for menor, vai se adequar*/
+    margin: auto; /*cria espaçamento dos lados, se adequando ao tamanho da tela e deixando conteúdo alinhado*/
+}
+
+.photo{
+    border: 2px solid black;
+    border-radius: 50px;
 }
 
 #tittle, .subtitle, .post_tittle { 
-    color: blue;
+    color: #505050;
+}
+
+#tittle {
+    font-size: 40px; ;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: underline;
+    color: #505050;
 }
 
 .post_tittle{
     font-size: 16px;
     font-style: italic;
+    margin: 0;
+    margin-bottom: 15px;
 }
 
 .post{
     background: #fff;
-    padding: 10px;
-    border: 3px solid #000;
-    margin: 10px;
+    padding: 15px;
+    border: 3px solid #505050;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.post_content {
+    margin: 0;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    text-align: justify;
+}
+
+.post_image {
+    margin-bottom: 15px;
+    width: 100%; /*sempre vai respeitar o elemento de fora*/
+}
+
+.contacts_list {
+    list-style-type: none; 
+    padding-left: 15px;
+}
+
+.contacts_list li a { /*funciona em cascata*/
+    text-decoration: none; 
 }
