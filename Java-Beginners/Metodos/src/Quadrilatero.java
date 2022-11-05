@@ -1,17 +1,17 @@
 public class Quadrilatero {
-    public static void area(double lado){
-        System.out.println("Área do quadrado: " + lado*lado); 
+    public static double area(double lado){
+        return  lado*lado; 
     }
 
-    public static void area(double ladoMenor, double ladoMaior){
-        System.out.println("Área do retângulo: " + ladoMaior*ladoMenor); 
+    public static double area(double ladoMenor, double ladoMaior){
+        return ladoMaior*ladoMenor; 
     }
 
-    public static void area(double baseMaior, double baseMenor, double altura){
-        System.out.println("Área do trapézio: " + (baseMaior+baseMenor)*altura / 2); 
+    public static double area(double baseMaior, double baseMenor, double altura){
+        return (baseMaior+baseMenor)*altura / 2; 
     }
 
-    public static void area(float diagonalMaior, float diagonalMenor, float altura){
-        System.out.println("Área do trapézio: " + (diagonalMaior+diagonalMenor)*altura / 2); 
+    public static double area(float diagonalMaior, float diagonalMenor, float altura){
+        return (diagonalMaior+diagonalMenor)*altura / 2; 
     }
 }

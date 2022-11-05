@@ -13,8 +13,14 @@ public class App {
 
 
         // Quadrilatero
-        Quadrilatero.area(7);
-        Quadrilatero.area(7.4, 14);
-        Quadrilatero.area(7, 5, 2);
+        double quadrado = Quadrilatero.area(7);
+        double retangulo = Quadrilatero.area(7.4, 14);
+        double losango = Quadrilatero.area(7f, 5f, 2f);
+        double trapezio = Quadrilatero.area(7d, 5d, 2d);
+
+        System.out.println("Área do quadrado: " + quadrado);
+        System.out.println("Área do retângulo: " + retangulo);
+        System.out.println("Área do losango: " + losango);
+        System.out.println("Área do trapézio: " + trapezio);
     }
 }

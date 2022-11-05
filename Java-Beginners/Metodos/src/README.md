@@ -2,12 +2,18 @@
 
 ### Estrutura geral:
 * classe = atributos + metodos (funções, subrotinas)
-* visibilidade: todo o sistema (public), privado (private), invisivel para outras classes (protected)
+* visibilidade: 
+    * todo o sistema - public, 
+    * privado - private, 
+    * invisivel para outras classes - protected
 * tipo de dado: concreto ou abstrato
 * modificador: static ou final
-* retorno: tipo de dado (primitivos: int, boolean) ou void 
+* retorno: tipo de dado (primitivos: int, boolean) ou void. 
+    *  o tipo de retorno de um método deve ser compatível ao definido na criação
 * nome do método: camelCase
-* parametros necessarios: por valor/cópia ou referência/endereço
+* parametros necessarios: 
+    * por valor/cópia 
+    * por referência/endereço
 * exceções: necessário se atentar a tratamento de erros (ex: divisor não pode ser 0) 
 * corpo: código ou vazio (termina em;)
 * assinatura = nome + parametros (ou só o abrir e fechar de parênteses)
@@ -33,7 +39,7 @@ println()
 println(String x)
 println(char[] x)
 ```
-#### Ao tentar sobrecarregar um método mudando apenas o nome, haverá erro de compilação.
+#### Ao tentar sobrecarregar um método mudando apenas o nome, haverá erro de compilação:
 
 ```
 // Duplicate method area(double, double, double)
