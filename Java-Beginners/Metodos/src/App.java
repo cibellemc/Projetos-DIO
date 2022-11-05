@@ -8,9 +8,13 @@ public class App {
         // quando são static,podemos chamar diretamente a Classe
         Calculadora.soma(1,2);
         Calculadora.divisao(1,2);
-        
 
         // Emprestimo
-        
+
+
+        // Quadrilatero
+        Quadrilatero.area(7);
+        Quadrilatero.area(7.4, 14);
+        Quadrilatero.area(7, 5, 2);
     }
 }
