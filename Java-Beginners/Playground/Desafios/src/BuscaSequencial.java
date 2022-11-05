@@ -4,8 +4,8 @@ public class BuscaSequencial {
 
     public static void main(String[] args) {
 
-        Scanner leitor = new Scanner(System.in);
-        int elemento = leitor.nextInt();
+        Scanner input = new Scanner(System.in);
+        int elemento = input.nextInt();
         
         System.out.println(buscarElemento(elemento));
     }

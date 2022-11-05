@@ -4,9 +4,9 @@ public class FizzBuzz {
 
     public static void main(String[] args) {
 
-        Scanner number = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        int num = number.nextInt();
+        int num = input.nextInt();
         FizzBuz(num);
 
     }

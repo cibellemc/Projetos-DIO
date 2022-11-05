@@ -4,8 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Scanner numero = new Scanner(System.in);
-        int N = numero.nextInt();
+        Scanner input = new Scanner(System.in);
+        int N = input.nextInt();
         
         System.out.println(somatorio(N));
     }
