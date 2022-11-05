@@ -1,6 +1,7 @@
 ## Comentários sobre métodos:
 
-### Estrutura geral:
+> Estrutura geral:
+
 * classe = atributos + metodos (funções, subrotinas)
 * visibilidade: 
     * todo o sistema - public, 
@@ -21,7 +22,8 @@
 * mensagem: solicitar que o método execute
 * os métodos só tem como obrigatorio o retorno e o nome
 
-### Sobrecarga:
+> Sobrecarga:
+
 * Capacidade de definir métodos para diferentes contextos, mas preservando seu nome 
 * Muda-se a lista de parâmetros
 
@@ -54,5 +56,6 @@ public static void area(double diagonalMaior, double diagonalMenor, double altur
 
 ```
 
-### Sobrescrita:
+> Sobrescrita:
+
 * Ligado à herança
