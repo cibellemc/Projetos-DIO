@@ -16,11 +16,11 @@ public class Carro {
     }
 
     // get e set podem ferir encapsulamento
-    void setCar(String cor){
+    void setCor(String cor){
         this.cor = cor;
     }
 
-    String getCar(){
+    String getCor(){
         return cor;
     }
 

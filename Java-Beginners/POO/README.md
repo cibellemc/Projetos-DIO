@@ -23,7 +23,15 @@ Paradigma de análise (entender o problema), projeto (abstrair, criar modelo com
         * destrutor: auxilia a destruição. Libera recurso da memória. 
     * int calcularTotal(), boolean ligar(), void frear(), void finalize()
     * sobrecarga: mudar assinatura (nome + parâmetros) de acordo com a necessidade
-* Objeto
-* Mensagem
+* Objeto: representação de conceito/entidade. Instância de classe.
+    * variável do tipo da classe, new e construtor.
+    ```
+    Carro carro = new Carro();
+    ```
+* Mensagem: ativação do método. Requisição que dispara ação. Pode ocorrer via objeto e via classe
+    ```
+    carro.<metodo>;
+    Carro.<metodo>
+    ```
 
 
