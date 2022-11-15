@@ -16,7 +16,13 @@ Paradigma de análise (entender o problema), projeto (abstrair, criar modelo com
     * Substantivos, nomes significativos considerando contexto
 * Atributo: características próprias a alguém/alguma coisa
     * Tipos adequados: verificar a finalidade
-* Método
+* Método: definem e realizam comportamentos. Executado quando é feita solicitação
+    * verbos
+    * métodos especiais: 
+        * construtor: criar objetos, prover valores iniciais - nome obrigatoriamente igual a classe. Caso não necessite de parâmetros, não precisa ser definido explicitamente
+        * destrutor: auxilia a destruição. Libera recurso da memória. 
+    * int calcularTotal(), boolean ligar(), void frear(), void finalize()
+    * sobrecarga: mudar assinatura (nome + parâmetros) de acordo com a necessidade
 * Objeto
 * Mensagem
 
