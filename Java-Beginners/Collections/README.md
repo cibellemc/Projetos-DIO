@@ -13,3 +13,9 @@ Objeto que agrupa múltipos elementos (primitivos ou objetos) dentro de uma úni
     * Vector: thread
     * ArrayList: pesquisa
     * LinkedList: operação de inserção e exclusão
+
+    * é possível ordenar o map pelo valor
+    * list ser e quee
+    * hashset linkrdhash treeset
+    * maptoint
+    * converter cada elementoem um outro de acordo com a funçao 
