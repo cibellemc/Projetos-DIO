@@ -2,8 +2,27 @@
 Muitas classes, pacotes, execução de testes (compilar e executar) via linha de código trazem problemas. Com o Maven, podemos compilar, executar automaticamente todas as classes Java da aplicação e empacotar projetos
 
 ## POM – Project Object Model
+* Nome do projeto, configurações de build, detalhes do projeto (nome, descrição, licença, url), configurações de ambiente (repositórios, tracking, profiles)
 * Define como vai ser executada, quais dependências (frameworks, bibliotecas e respectivas versões)
 * Facilita compreensão do desenvolvedor, verificar nível de complexidade
+* Unidade fundamental de trabalho
+* Formato XML
+* O Maven sempre procura pelo POM para executar
+
+### Pom.xml básico
+```
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>web.digitalinnovationone</groupId>
+  <artifactId>webapp-project</artifactId>
+  <version>1.0-SNAPSHOT</version>
+</project>
+```
+
+### O Super POM
+* Modelo base nas quais tem todas as configurações padrões.
+* Caso você não declare, o Maven busca do Super (conceito de herança)
+* Você pode sobrescrever
 
 ## Download e instalação Maven
 1. maven.apache.org > Binary zip archive apache-maven-3.8.6-bin.zip
@@ -12,7 +31,9 @@ Muitas classes, pacotes, execução de testes (compilar e executar) via linha de
 4. Testa com mvn –version
 
 ## Criação do primeiro projeto
-```mvn archetype:generate -DgroupId=one.digitalinnovation -DartifactId=quick-start-maven -Darchetype=maven-archetype-quickstart -DinteractiveMode=false```
+```
+mvn archetype:generate -DgroupId=one.digitalinnovation -DartifactId=quick-start-maven -Darchetype=maven-archetype-quickstart -DinteractiveMode=false
+```
 
 ## Maven archetype
 Geração de um projeto com base em um template: definimos versão de comp,onentes, quais vão ser inseridos, organização de pacotes e arquivos
@@ -38,3 +59,20 @@ mvn packege
 
 > Limpar diretório de trabalho (target)
 mvn clean
+
+## Repositórios
+* Local (userprofile\.m2\repository) e Remoto (Maven Center)
+* Podemos encontrar plugins e bibliotecas
+
+## Propriedades
+* groupID: id da organização
+* artifactId: nome do projeto em si
+* version: número da versão que será utilizada
+
+## Dependência direta (declarada no pom.xml) e transitiva (dependências obrigatórias das dependências declaradas no pom.xml)
+
+## Publicar dependências:
+mvn install (vai pro repositório local)
+
+## Reutilizar componentes:
+copia grupId, artifactId e version e cola na dependência do outro projeto
