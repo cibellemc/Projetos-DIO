@@ -76,3 +76,21 @@ mvn install (vai pro repositório local)
 
 ## Reutilizar componentes:
 copia grupId, artifactId e version e cola na dependência do outro projeto
+
+## Ciclo de vida de construção
+1. Default Lifecycle:
+  * Principal ciclo
+  * Deploy local
+  * 23 fases (comandos): validate, compile, test, package, install, deploy
+2. Clean Lifecycle:
+  * Limpeza do projeto, preparado para  publicação
+  * 3 fases (pre-clean, clean, post-clean)
+3. Site Lifecycle:
+  * 4 fases (pre-site, site, post-site, site-deploy)
+  * Documentação
+
+## Projetos multi-módulos
+* No projeto "pai", que agrega aos demais, inclui 
+``` 
+<packaging>pom</packaging>
+```
