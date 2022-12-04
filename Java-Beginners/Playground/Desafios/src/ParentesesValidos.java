@@ -10,13 +10,20 @@ public class ParentesesValidos {
     }
 
     public static boolean ehValido(String s) {
-        String saida = "";
-        char first = s.charAt(0);
-        String second = s.charAt(1);
-        if (first == "(" && second == ")" ||
-            first == "[" && second == "]"||
-            first == "{" && second == "}") {
-            return true;
-        }
+        char f = s.charAt(0);
+        char d = s.charAt(1);
+        switch(d){
+        case ')':
+                if(f == '(')
+                    return true; 
+            case ']':
+                if(f == '[')
+                    return true; // bem formada
+            case '}':
+                if(f == '{')
+                    return true; // bem formada
+            default:
+                return false;
+            }
     }
 }
