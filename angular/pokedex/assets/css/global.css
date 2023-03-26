@@ -16,21 +16,20 @@
     grid-template-columns: 1fr 1fr; /*uma fração pra cada lado, 50% 50%*/
 }
 
-.pokemons li {
+.pokemon {
     /*height: 85px;*/
     margin: .3rem;
     padding: 1.5rem 1rem;
     border-radius: .9rem;
 
-
     color: #ffff;
-    background-color: #14a06f;
+    background-color: #49d0b0;
 
     display: flex;
     flex-direction: column;
 }
 
-.pokemons li img {
+.pokemon .detail img {
     border-style: none;
     height: 70px;
     max-width: 100%; /*não vazar*/
