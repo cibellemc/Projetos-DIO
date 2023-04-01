@@ -55,3 +55,17 @@ url: https://pokeapi.co/docs/v2/pokemon
 
 7º Response body: não necessariamente, no get precisa mas em casos de post somente o status já responde
 
+
+// fetch retorna um promise - processamento assíncrono: resposta não é imediata, se der certo uma hora você recebe. se não for especificado, faz get
+fetch(url)
+    .then(function (response){ // quando recurso for disponibilizado - try
+        console.log(response)
+    })
+    .catch(function (error){ //quando dá erro
+        console.error(error)
+    })
+    .finally(function (){ //independente de dae certo
+        console.log('Requisição concluída');
+    })
+
+fetch retorna uma string, json dentro, então faz response.json e recebe convertido

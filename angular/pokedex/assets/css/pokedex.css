@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    width: 100vh;
 
     display: grid; /*tabela*/
     grid-template-columns: 1fr; /*por default só uma fração*/
