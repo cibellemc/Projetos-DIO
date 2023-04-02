@@ -1,9 +1,10 @@
 
 const pokemonsList = document.getElementById('pokemonsList')
-const loadMore = document.getElementById('loadMore')
+const loadMoreButton = document.getElementById('loadMore')
 
-const limit = 5
-let offset = 0
+const maxCards = 151 // máximo de exibições - primeira geração
+const limit = 5 // quantidade de cards por página - número fixo
+let offset = 0 // cada offset aumenta em 5 (o limit), é a quantidade de pokes
 
 function convertPokemonToList(pokemon){
     // ter o tipo no nome da classe vai permitir estilizar css
@@ -34,7 +35,16 @@ function loadPokemons(offset, limit){
 
 loadPokemons(offset, limit)
 
-loadMore.addEventListener('click', () => {
-    offset += limit
-    loadPokemons(offset, limit)
+loadMoreButton.addEventListener('click', () => {
+    offset += limit  // cada vez que o botão é clicado aumenta 5 cads
+    const qtdCardsNextPage = offset + limit // calcula a quantidade de cards no próximo click
+
+    if (qtdCardsNextPage >= maxCards) { // se passar da quantidade máxima definida (151)
+        const newLimit = maxCards - offset // diferença entre o máximo e o que seria exibido
+        loadPokemons(offset, newLimit)
+
+        loadMoreButton.parentElement.removeChild(loadMoreButton)
+    } else {
+        loadPokemons(offset, limit)
+    }
 })
