@@ -4,8 +4,8 @@
     list-style: none;
 
     display: grid; /*tabela*/
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 4fr));
+    /*define o auto ajuste, seguindo o mínimo de 13.125rem = 200px e o max de 4 colunas*/
+    grid-template-columns: repeat(auto-fit, minmax(13.125rem, 4fr)); 
 }
 
 .normal {
