@@ -4,7 +4,7 @@
     list-style: none;
 
     display: grid; /*tabela*/
-    /*define o auto ajuste, seguindo o mínimo de 13.125rem = 200px e o max de 4 colunas*/
+    /*define o auto ajuste, seguindo o mínimo de 13.125rem = 210px e o max de 4 colunas*/
     grid-template-columns: repeat(auto-fit, minmax(13.125rem, 4fr)); 
 }
 
@@ -129,7 +129,7 @@
 
 .pokemon .detail img {
     height: 5rem;
-    max-width: 100%; /*não vazar*/
+    max-width: 65%; /*para que imagens muito grandes não vazem, ocupando 65% do card*/
 }
 
 .pagination {
