@@ -1,4 +1,9 @@
 
+const pokemonsList = document.getElementById('pokemonsList')
+const loadMore = document.getElementById('loadMore')
+
+const limit = 5
+let offset = 0
 
 function convertPokemonToList(pokemon){
     // ter o tipo no nome da classe vai permitir estilizar css
@@ -18,10 +23,18 @@ function convertPokemonToList(pokemon){
 `
 }
 
-const pokemonsList = document.getElementById('pokemonsList')
+function loadPokemons(offset, limit){
+    // busca a lista de pokemons e transforma poke em lista string de html e concatena lista sem separador, formando um novo html
+    pokeapi.getPokemons(offset, limit).then((pokemons = []) => { 
+        // em vez de usar for, estimula a página a renderizar re uma vez
+        pokemonsList.innerHTML += pokemons.map(convertPokemonToList).join('')
+    })
 
-// busca a lista de pokemons e transforma poke em lista string de html e concatena lista sem separador, formando um novo html
-pokeapi.getPokemons().then((pokemons = []) => { 
-    // em vez de usar for, estimula a página a renderizar re uma vez
-    pokemonsList.innerHTML += pokemons.map(convertPokemonToList).join('')
+}
+
+loadPokemons(offset, limit)
+
+loadMore.addEventListener('click', () => {
+    offset += limit
+    loadPokemons(offset, limit)
 })
