@@ -14,10 +14,10 @@ body {
     background-color: #fff;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 660px) {
     .content {
         height: auto;
-        max-width: 992px;
+        max-width: 660px;
         margin: 1rem auto; /*fica centralizado*/
         border-radius: 1rem;
     }
