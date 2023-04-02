@@ -1,11 +1,28 @@
 
 const pokeapi = {}
 
-pokeapi.getPokemonDetail = (pokemon) => {
-    return fetch(pokemon.url).then((response) => response.json())
+function convertPokeApiToPokemon(pokeDetail) {
+    const pokemon = new Pokemon()
+    pokemon.id = pokeDetail.id
+    pokemon.name = pokeDetail.name
+
+    const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name)
+    pokemon.types = types
+
+    const [type] = types // pegando primeira posição - destructurin
+    pokemon.type = type
+
+    pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
+    return pokemon
 }
 
-pokeapi.getPokemons = (offset = 0, limit = 10) => {
+pokeapi.getPokemonDetail = (pokemon) => {
+    return fetch(pokemon.url)
+        .then((response) => response.json())
+        .then(convertPokeApiToPokemon)
+}
+
+pokeapi.getPokemons = (offset = 0, limit = 8) => {
     const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
 
     // fetch retorna um promise - processamento assíncron: resposta não é imediata, se der certo uma hora você recebe

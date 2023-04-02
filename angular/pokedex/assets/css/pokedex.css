@@ -2,9 +2,10 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    width: 100vh;
 
     display: grid; /*tabela*/
-    grid-template-columns: 1fr 1fr; /*por default só uma fração*/
+    grid-template-columns: 1fr; /*por default só uma fração*/
 }
 
 .pokemon {
@@ -64,6 +65,12 @@
     border-style: none;
     
     align-self: flex-end;
+}
+
+@media screen and (min-width: 380px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr ; /*uma fração pra cada lado, 50% 50%*/
+    }
 }
 
 @media screen and (min-width: 576px) {

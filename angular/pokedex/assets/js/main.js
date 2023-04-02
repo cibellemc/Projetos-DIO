@@ -1,9 +1,4 @@
 
-function convertPokemonTypeToLi(pokemonTypes) {
-    // o dicionário é types:[{"slot": 1,"type": {"name": "grass","url": "https://pokeapi.co/api/v2/type/12/"},{"slot": 2,"type": {"name": "poison", "url": "https://pokeapi.co/api/v2/type/4/"}}]
-
-    return pokemonTypes.map((typeSlot) => `<li class="type">${typeSlot.type.name}</li>`)
-}
 
 function convertPokemonToList(pokemon){
     return `
@@ -13,10 +8,10 @@ function convertPokemonToList(pokemon){
     
     <div class="detail">
         <ol class="types">
-            ${convertPokemonTypeToLi(pokemon.types).join('')}
+            ${pokemon.types.map((type) => `<li class="type">${type}</li>`).join('')}
         </ol>
 
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="${pokemon.name}">
+        <img src="${pokemon.photo}" alt="${pokemon.name}">
     </div>   
 </li>
 `
