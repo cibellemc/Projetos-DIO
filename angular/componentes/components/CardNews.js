@@ -21,8 +21,9 @@ class Cardnews extends HTMLElement {
 
         // set = atribui valor a um prop, get = pega o valor que foi passado
         const img = document.createElement("img")
-        img.setAttribute("src", "assets/1002903_1.png")
-
+        img.setAttribute("src", (this.getAttribute("photo") || "assets/image2-512.webp"))
+        // img.src = "assets/1002903_1.png"
+        img.alt = "Foto da notícia"
         cardRight.appendChild(img)
 
 
@@ -32,14 +33,15 @@ class Cardnews extends HTMLElement {
 
         const author = document.createElement("span")
         // o texto do elemento é o conteúdo + o valor do atributo passado no html
-        author.textContent = "By " + this.getAttribute("author")
+        // no caso de não ser passado (null), usa o default
+        author.textContent = "By " + (this.getAttribute("author") || "By Anonimous")
 
         const newsTitle = document.createElement("a")
         newsTitle.textContent = this.getAttribute("newsTitle")
+        newsTitle.href = this.getAttribute("") // em vez de setar pode acessar direto
 
         const description = document.createElement("p")
         description.textContent = this.getAttribute("description")
-
 
         cardLeft.appendChild(author)
         cardLeft.appendChild(newsTitle)
