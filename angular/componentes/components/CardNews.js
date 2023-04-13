@@ -11,12 +11,14 @@ class Cardnews extends HTMLElement { //herda características de um elemento
         const componentRoot = document.createElement("div")
         componentRoot.setAttribute("class", "card")
 
+        // poderia ter uma função para cada filho
         const cardRight = document.createElement("div")
         cardRight.setAttribute("class", "card-right")
 
         const img = document.createElement("img")
         cardRight.appendChild(img)
 
+        // parte da notícia em si
         const cardLeft = document.createElement("div")
         cardLeft.setAttribute("class", "card-left")
 
