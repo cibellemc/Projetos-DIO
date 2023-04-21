@@ -3,7 +3,6 @@
 * JavaScript/TypesCript
 * Node
 
-<br>
 
 ### ⌨️ Comandos básicos
 ```
@@ -11,14 +10,12 @@ npm install //gera arquivos package.json e package-lock.json
 npx tsc --init //gera arquivo tsconfig 
 npx tsc //compila e executa
 ```
-<br>
+
 
 ### ⚙️ Configurações
 * Alterar pastas de root para src (ts) e outdir para build (js) 
-* Preferível criar um script e executar 
-<br>`npm run <nome do script>`
+* Preferível criar um script e executar `npm run <nome do script>`
 
-<br>
 
 ### 📝 Aprendizado:
 >Array Multi Type: `let a1: (string | number)[] = ["a", 1, 7]`
@@ -53,7 +50,7 @@ npx tsc //compila e executa
 
 >Entendendo a estrutura básica de um projeto Angular
 
-* src - parte codável:
+* src in - parte codável:
     *index.html: vai ser renderizado (root = coração)
     * main: configurações da inicialização
     * podyfilis: aumentar compatibilidade, fazer funções específicas para navegadores antigos
@@ -64,6 +61,29 @@ npx tsc //compila e executa
         * o ts junta seletor, template (html) e css, porém pode ser feito tudo junto
         * importar do @angular/core
         * app.module agrupa importações
-* arquivos de configuração
+* src out: arquivos de configuração
 </p>
+<br>
 
+>Estrutura básica de um componente
+* porta de entrada: arquivo ts
+* caso de construção de html e css dentro do ts:
+```
+import { Component, Input } from '@angular/core'; //importa do módulo principal uma interface
+
+@Component({ //decorator 
+  selector: 'hello', //tag que vou utilizar
+  standalone: true, //configuração opcional que estava no stackblitz, executa o compilado sem precisar de servidor web
+  template: `<h1>Hello from {{name}}!</h1>`, //html
+  styles: [`h1 {color: green;}`], //css
+})
+
+export class HelloComponent { //exportação de classe
+  @Input() name: string;
+}
+```
+* caso de html e css em arquivos separados:
+```
+  templateUrl: './hello.component.html', //o que muda é apenas a "propriedade"
+  styleUrls: ['./hello.component.css'],
+```
