@@ -52,7 +52,7 @@ npx tsc //compila e executa
 
 * src in - parte codável:
     *index.html: vai ser renderizado (root = coração)
-    * main: configurações da inicialização
+    * main: configurações da inicialização, é o primeiro a ser chamado e chama o module, onde estão as declarações de componentes
     * podyfilis: aumentar compatibilidade, fazer funções específicas para navegadores antigos
     * style.css: estilo global
     * app:
@@ -71,14 +71,14 @@ npx tsc //compila e executa
 ```
 import { Component, Input } from '@angular/core'; //importa do módulo principal uma interface
 
-@Component({ //decorator 
+@Component({ //decorator
   selector: 'hello', //tag que vou utilizar
   standalone: true, //configuração opcional que estava no stackblitz, executa o compilado sem precisar de servidor web
   template: `<h1>Hello from {{name}}!</h1>`, //html
   styles: [`h1 {color: green;}`], //css
 })
 
-export class HelloComponent { //exportação de classe
+export class HelloComponent { //exportação de classe, que pode ser só declarado {}
   @Input() name: string;
 }
 ```
@@ -86,4 +86,15 @@ export class HelloComponent { //exportação de classe
 ```
   templateUrl: './hello.component.html', //o que muda é apenas a "propriedade"
   styleUrls: ['./hello.component.css'],
+```
+* O HTML enxerga a classe, sendo a interpolação de dados sendo feita com `{{}}`
+Ex:
+```
+export class Button {
+  buttonText: string = 'ACESSAR'; //<button>{{buttonText}}</button>
+  buttonTexts: string[] = ['ACESSAR', 'CANCELAR'] //<button>{{buttonTexts[1]}}</button>
+  buttonObject = {
+    label: 'ADICIONAR'
+  } //<button>{{buttonObject.label}}</button>
+}
 ```
