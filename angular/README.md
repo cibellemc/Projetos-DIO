@@ -98,3 +98,13 @@ export class Button {
   } //<button>{{buttonObject.label}}</button>
 }
 ```
+
+>Comunicação entre componentes: data binding
+```
+<hello name={{name}}></hello> //espera variável
+<hello name="Sakura"></hello> //espera texto
+
+<hello [name]="name"></hello> //espera variável
+<hello [name]="'name'"></hello> //colocando entre aspas simples, lê de forma literal
+```
+* Significa que a propriedade name do componente hello está sendo imputada com variável exportada da classe pai
