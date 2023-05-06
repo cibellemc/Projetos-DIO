@@ -1,0 +1,12 @@
+<app-comp-atributos>
+  <h2>NG CONTENT</h2>
+  <p>Veio do pai, não aparece sem ser trabalhado no filho</p>
+</app-comp-atributos>
+
+<app-card *ngIf="isAlive; else nomeAssociado "></app-card>
+
+<ng-template #nomeAssociado>
+  <p>bloco secreto</p>
+</ng-template>
+
+<router-outlet></router-outlet>
