@@ -5,4 +5,5 @@ class Pokemon {
     types
     principalType
     photo
+    hability
 }

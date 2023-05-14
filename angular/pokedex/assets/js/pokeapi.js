@@ -13,6 +13,13 @@ function convertPokeApiToPokemon(pokeDetail) {
     pokemon.type = type
 
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
+
+    const habilitys = pokeDetail.stats.map((habilitySlot) => habilitySlot.stat.name + ": " + habilitySlot.base_stat)
+    pokemon.habilitys = habilitys
+
+    const [hability] = habilitys
+    pokemon.hability = hability
+
     return pokemon
 }
 
