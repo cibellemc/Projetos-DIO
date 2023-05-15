@@ -116,6 +116,10 @@
     list-style: none;
 }
 
+.pokemon .detail .habilitys {
+    display: none;
+}
+
 .pokemon .detail .types .type {
     margin: .3rem 0; /*margin só cima e baixo*/
     padding: .3rem .5rem;
@@ -166,7 +170,22 @@
     text-align: center;
     color: #fff;
   }
-  
+
+  .habilitys {
+    padding: 0;
+    word-spacing: 1;
+  }
+
+  li.hability {
+    list-style-type: none;
+    margin-bottom: 1rem;
+  }
+
+  .modal img {
+    height: 20rem;
+    max-width: 90%; 
+  }
+
   .modal h2 {
     margin-top: 0;
   }
@@ -176,9 +195,15 @@
   }
   
   .fechar-modal {
-    background-color: #fff;
-    color: #000;
+    position: fixed;
+    right: 20px;
+    display: block;
+    margin: .3rem 0; /*margin só cima e baixo*/
+    padding: .3rem .5rem;
+
     border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+    border-radius: .7rem;
+    
+    color: #fff;
+    background-color: #6c79db;
   }
