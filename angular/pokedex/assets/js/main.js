@@ -1,7 +1,7 @@
 
 const pokemonsList = document.getElementById('pokemonsList')
 const loadMoreButton = document.getElementById('loadMore')
-let pokemons = document.getElementsByClassName('pokemon')
+// let pokemons = document.getElementsByClassName('pokemon')
 
 const maxCards = 151 // máximo de exibições - primeira geração
 const limit = 5 // quantidade de cards por página - número fixo
@@ -45,16 +45,18 @@ function loadPokemons(offset, limit){
             const habilitys = pokemons[i].habilitys;
 
             let habilitysList = '';
-            for (let i = 0; i < habilitys.length; i++) {
-                habilitysList += `<li class="hability">${habilitys[i]}</li>`;
+            for (let j = 0; j < habilitys.length; j++) {
+                habilitysList += `<li class="hability">${habilitys[j]}</li>`;
             }
 
-            modal.innerHTML = `<button class="fechar-modal">x</button>
-            <img src="${photo}">
+            modal.innerHTML = `
+            <div class="modal-content"><button class="fechar-modal">x</button>
+            <img src="${photo}" class=${pokemons[i].type}>
             <h2>${name}</h2>
             <ul class="habilitys">
                 ${habilitysList}
             </ul>
+            </div>
             `;
 
             document.body.appendChild(modal);
@@ -87,4 +89,3 @@ loadMoreButton.addEventListener('click', () => {
     }
     pokemons = document.getElementsByClassName('pokemon')
 })
-
