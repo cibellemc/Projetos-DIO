@@ -1,0 +1,27 @@
+@startuml Iphone
+!theme carbon-gray
+
+title Desafio POO - Iphone
+
+interface ReprodutorMusical {
+    + tocar()
+    + pausar()
+    + selecionarMusica()
+}
+
+interface Telefone {
+    + ligar()
+    + desligar()
+    + atender()
+    + iniciarCorreioVoz()
+}
+
+interface NavegadorWeb {
+    + exibirPagina()
+    + adicionarNovaAba()
+    + atualizarPagina()
+}
+
+class Iphone implements ReprodutorMusical, Telefone, NavegadorWeb{}
+
+@enduml
