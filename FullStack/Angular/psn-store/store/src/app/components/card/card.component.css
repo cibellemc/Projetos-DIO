@@ -1,0 +1,23 @@
+.card-container {
+    position: relative;
+
+    border: 3px #3e4357;
+    border-radius: 10px;
+
+    width: 350px;
+    height: 500px;
+    
+    display: flex;
+    overflow: hidden; /*o que sair fica escondido*/
+    margin-top: 10px;
+}
+
+.card-img {
+    min-width:100%;
+    min-height: 100%;
+    transition: transform .8s;
+
+    &:hover {
+        transform: scale(1.1) ;
+    }
+}
