@@ -11,4 +11,7 @@ export class CardPricingComponent {
 
   @Input()
   gamePrice: string = ""
+
+  @Input()
+  gameTitle: string = ""
 }

@@ -1,14 +1,13 @@
-<a href="" class="card-container">
-    <img 
-    class="card-img"
-    [src]=[gameCover]
-    alt="">
-    <app-card-label 
-        gameLabel="{{gameLabel}}">
-    </app-card-label>
+<div class="card-container" *ngFor="let jogo of jogos">
+  <img class="card-img"
+    [src]="jogo.imagemUrl"
+    alt="{{jogo.nome}}">
 
-    <app-card-pricing 
-        gamePrice="{{gamePrice}}"
-        gameType="{{gameType}}">
-    </app-card-pricing>
-</a>
+  <app-card-label
+    [gameLabel]="jogo.categoria"></app-card-label>
+
+  <app-card-pricing 
+    [gameTitle]="jogo.nome"
+    [gamePrice]="jogo.preco" 
+    [gameType]="jogo.plataformas"></app-card-pricing>
+</div>
