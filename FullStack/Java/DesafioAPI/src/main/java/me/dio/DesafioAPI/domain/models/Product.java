@@ -11,8 +11,6 @@ public class Product {
     private double price;
     private String category;
 
-    public Product() {}
-
     public Long getId() {
         return id;
     }

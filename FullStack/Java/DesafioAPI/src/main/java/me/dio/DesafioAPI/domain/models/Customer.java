@@ -19,8 +19,6 @@ public class Customer {
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Debt> debts;
 
-    public Customer() {}
-
     public Long getId() {
         return id;
     }

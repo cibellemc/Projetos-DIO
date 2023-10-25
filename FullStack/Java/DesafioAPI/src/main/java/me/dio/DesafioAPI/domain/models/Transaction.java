@@ -30,8 +30,6 @@ public class Transaction {
             inverseJoinColumns = @JoinColumn(name = "product_id"))
     private List<Product> products;
 
-    public Transaction() {}
-
     // Construtores, getters e setters
 
     public Long getId() {

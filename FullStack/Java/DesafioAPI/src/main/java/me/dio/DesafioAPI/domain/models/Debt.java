@@ -21,8 +21,6 @@ public class Debt {
     @JoinColumn(name = "transaction_id")
     private Transaction transaction;
 
-    public Debt() {}
-
     public Long getId() {
         return id;
     }
