@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="18fcaea6-a554-458d-b21e-4dbd51c9c540" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/src/main/java/me/dio/DesafioAPI/DesafioApiApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/src/main/java/me/dio/DesafioAPI/controllers/CustomerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/src/main/java/me/dio/DesafioAPI/controllers/DebtController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/src/main/java/me/dio/DesafioAPI/controllers/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/src/main/java/me/dio/DesafioAPI/controllers/TransactionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/src/main/java/me/dio/DesafioAPI/domain/models/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/src/main/java/me/dio/DesafioAPI/domain/models/Debt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/src/main/java/me/dio/DesafioAPI/domain/models/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/src/main/java/me/dio/DesafioAPI/domain/models/Transaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/src/main/java/me/dio/DesafioAPI/domain/repositories/CustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/src/main/java/me/dio/DesafioAPI/domain/repositories/DebtRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/src/main/java/me/dio/DesafioAPI/domain/repositories/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/src/main/java/me/dio/DesafioAPI/domain/repositories/TransactionRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/src/main/java/me/dio/DesafioAPI/services/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/src/main/java/me/dio/DesafioAPI/services/DebtService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/src/main/java/me/dio/DesafioAPI/services/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/src/main/java/me/dio/DesafioAPI/services/TransactionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/src/test/java/me/dio/DesafioAPI/DesafioApiApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/target/classes/me/dio/DesafioAPI/DesafioApiApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/target/classes/me/dio/DesafioAPI/controllers/CustomerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/target/classes/me/dio/DesafioAPI/controllers/DebtController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/target/classes/me/dio/DesafioAPI/controllers/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/target/classes/me/dio/DesafioAPI/controllers/TransactionController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/target/classes/me/dio/DesafioAPI/domain/models/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/target/classes/me/dio/DesafioAPI/domain/models/Debt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/target/classes/me/dio/DesafioAPI/domain/models/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/target/classes/me/dio/DesafioAPI/domain/models/Transaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/target/classes/me/dio/DesafioAPI/domain/repositories/CustomerRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/target/classes/me/dio/DesafioAPI/domain/repositories/DebtRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/target/classes/me/dio/DesafioAPI/domain/repositories/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/target/classes/me/dio/DesafioAPI/domain/repositories/TransactionRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/target/classes/me/dio/DesafioAPI/services/CustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/target/classes/me/dio/DesafioAPI/services/DebtService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/target/classes/me/dio/DesafioAPI/services/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesafioAPI/target/classes/me/dio/DesafioAPI/services/TransactionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dio/DesafioAPI/DesafioApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dio/DesafioAPI/DesafioApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dio/DesafioAPI/domain/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dio/DesafioAPI/domain/models/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dio/DesafioAPI/domain/models/Debt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dio/DesafioAPI/domain/models/Debt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dio/DesafioAPI/domain/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dio/DesafioAPI/domain/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dio/DesafioAPI/domain/models/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dio/DesafioAPI/domain/models/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/me/dio/DesafioAPI/DesafioApiApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/dio/DesafioAPI/DesafioApiApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2X3QvEC7w6WkrQ5qaXb8DhhXg5y" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="DesafioApiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.dio.DesafioAPI.DesafioApiApplication" />
+      <module name="DesafioAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.dio.DesafioAPI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DesafioApiApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="18fcaea6-a554-458d-b21e-4dbd51c9c540" name="Changes" comment="" />
+      <created>1697855515679</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697855515679</updated>
+    </task>
+    <servers />
+  </component>
+</project>
