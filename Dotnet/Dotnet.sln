@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExemploFundamentos.Common",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioFundamentos", "DesafioFundamentos\DesafioFundamentos.csproj", "{C5F9B0D9-787F-405A-87BE-ABF7F1969EDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioHotel", "DesafioHotel\DesafioHotel.csproj", "{19C0BB3A-1559-4D69-85E3-24700380B1D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C5F9B0D9-787F-405A-87BE-ABF7F1969EDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5F9B0D9-787F-405A-87BE-ABF7F1969EDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5F9B0D9-787F-405A-87BE-ABF7F1969EDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19C0BB3A-1559-4D69-85E3-24700380B1D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19C0BB3A-1559-4D69-85E3-24700380B1D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19C0BB3A-1559-4D69-85E3-24700380B1D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19C0BB3A-1559-4D69-85E3-24700380B1D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
