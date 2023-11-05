@@ -20,7 +20,9 @@ namespace ModuloAPI.Controllers
         {
             _context.Add(contato);
             _context.SaveChanges();
-            return Ok(contato);
+
+            // diz que criou e mostra a url para acessar
+            return CreatedAtAction(nameof(ObterPorId), new { id = contato.Id }, contato);
         }
 
         [HttpGet("{id}")]
@@ -28,7 +30,8 @@ namespace ModuloAPI.Controllers
         {
             var contato = _context.Contatos.Find(id);
 
-            if (contato == null) {
+            if (contato == null)
+            {
                 return NotFound();
             }
 
@@ -40,7 +43,8 @@ namespace ModuloAPI.Controllers
         {
             var contatoBanco = _context.Contatos.Find(id);
 
-            if (contatoBanco == null) {
+            if (contatoBanco == null)
+            {
                 return NotFound();
             }
 
@@ -59,7 +63,8 @@ namespace ModuloAPI.Controllers
         {
             var contatoBanco = _context.Contatos.Find(id);
 
-            if (contatoBanco == null) {
+            if (contatoBanco == null)
+            {
                 return NotFound();
             }
 
@@ -69,14 +74,14 @@ namespace ModuloAPI.Controllers
         }
 
         [HttpGet("ObterPorNome")]
-        public IActionResult ObterPorNome(string nome) 
+        public IActionResult ObterPorNome(string nome)
         {
             var contatos = _context.Contatos.Where(x => x.Nome.Contains(nome));
             return Ok(contatos);
         }
 
         [HttpGet("ObterTodosContatos")]
-        public IActionResult ObterTodos() 
+        public IActionResult ObterTodos()
         {
             var contatos = _context.Contatos.ToArray();
             return Ok(contatos);
