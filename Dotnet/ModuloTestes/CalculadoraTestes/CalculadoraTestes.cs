@@ -52,19 +52,18 @@ public class CalculadoraTestes
         Assert.True(resultado);
     }
 
-    [Theory] // conjunto de cenários que passam pelo mesmo teste
-    // Arrange - cenário
-    [InlineData(2)] // para cada um é um teste diferente
-    [InlineData(4)]
-    [InlineData(6)]
-    [InlineData(8)]
-    [InlineData(10)]
-    public void DeveVerificarSeOsNumerosSaoParesERetornarVerdadeiro(int numero)
+    [Theory] 
+    [InlineData(new int[] {2,4})]    
+    [InlineData(new int[] {6,8,10})]    
+    public void DeveVerificarSeOsNumerosSaoParesERetornarVerdadeiro(int[] numeros)
     {
-        // Act - executar
-        bool resultado = _calc.EhPar(numero);
+        // Act e Assert
+        // foreach (int numero in numeros)
+        // {
+        //     Assert.True(_calc.EhPar(numero)); 
+        // }
 
-        // Assert - validar resultado esperado
-        Assert.True(resultado);
+        // Act e Assert
+        Assert.All(numeros, numero => Assert.True(_calc.EhPar(numero)));
     }
 }
