@@ -51,4 +51,20 @@ public class CalculadoraTestes
         // Assert - validar resultado esperado
         Assert.True(resultado);
     }
+
+    [Theory] // conjunto de cenários que passam pelo mesmo teste
+    // Arrange - cenário
+    [InlineData(2)] // para cada um é um teste diferente
+    [InlineData(4)]
+    [InlineData(6)]
+    [InlineData(8)]
+    [InlineData(10)]
+    public void DeveVerificarSeOsNumerosSaoParesERetornarVerdadeiro(int numero)
+    {
+        // Act - executar
+        bool resultado = _calc.EhPar(numero);
+
+        // Assert - validar resultado esperado
+        Assert.True(resultado);
+    }
 }
