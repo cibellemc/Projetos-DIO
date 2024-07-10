@@ -1,0 +1,15 @@
+# Ignore virtual environment folders
+venv/
+ENV/
+env/
+.Venv/
+
+# Ignore cache files
+__pycache__/
+*.pyc
+
+# Ignore configuration and dependency folders
+Lib/
+Scripts/
+include/
+contrib/
