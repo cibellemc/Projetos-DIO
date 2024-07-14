@@ -22,6 +22,16 @@ async def post(
     db_session: DataBaseDependency, 
     atleta_in: AtletaIn = Body(...)
 ):
+    existing_atleta = (await db_session.execute(
+        select(AtletaModel).filter_by(cpf=atleta_in.cpf)
+    )).scalar()
+
+    if existing_atleta:
+        raise HTTPException(
+            status_code=status.HTTP_303_SEE_OTHER,
+            detail=f"Já existe um atleta cadastrado com o CPF {atleta_in.cpf}"
+        )
+    
     categoria_nome = atleta_in.categoria.nome
 
     categoria = (await db_session.execute(select(CategoriaModel).filter_by(nome=atleta_in.categoria.nome))).scalars().first()

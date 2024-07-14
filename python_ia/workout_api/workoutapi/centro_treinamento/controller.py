@@ -17,9 +17,21 @@ router = APIRouter()
 
 async def post(
     db_session: DataBaseDependency, 
-    categoria_in: CentroTreinamentoIn = Body(...)
+    centro_treinamento_in: CentroTreinamentoIn = Body(...)
 ) -> CentroTreinamentoOut:
-    centro_treinamento_out = CentroTreinamentoOut(id=uuid4(), **categoria_in.model_dump())
+    
+    existing_centro_treinamento = (await db_session.execute(
+        select(CentroTreinamentoModel).filter_by(nome=centro_treinamento_in.nome)
+    )).scalars().first()
+
+    if existing_centro_treinamento:
+        # Retorna um HTTP 303 indicando que o recurso já existe
+        raise HTTPException(
+            status_code=status.HTTP_303_SEE_OTHER,
+            detail=f"Já existe um centro de treinamento com o nome '{centro_treinamento_in.nome}'",
+        )
+    
+    centro_treinamento_out = CentroTreinamentoOut(id=uuid4(), **centro_treinamento_in.model_dump())
     centro_treinamento_out_model = CentroTreinamentoModel(**centro_treinamento_out.model_dump())
     
     db_session.add(centro_treinamento_out_model)
