@@ -16,3 +16,5 @@ class AtletaModel(BaseModel):
     categoria_id = Column(Integer, ForeignKey('categorias.pk_id'))
     centro_treinamento_id = Column(Integer, ForeignKey('centros_treinamento.pk_id'))
 
+    categoria = relationship('CategoriaModel', back_populates='atletas')
+    centro_treinamento = relationship('CentroTreinamentoModel', back_populates='atletas')

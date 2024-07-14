@@ -5,6 +5,10 @@ https://pt.stackoverflow.com/questions/543028/como-usar-o-virtualenv-do-python-n
 ````
 python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ````
+ou, caso tenha o [make instalado](https://stackoverflow.com/questions/2532234/how-to-run-a-makefile-in-windows): 
+```
+make run
+```
 
 ## Para ver a documentação
 /docs
