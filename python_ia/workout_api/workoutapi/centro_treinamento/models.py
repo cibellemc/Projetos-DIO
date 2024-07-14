@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, DateTime, ForeignKey, Integer, String, Float
 from sqlalchemy.orm import relationship
 from contrib.models import BaseModel
 
@@ -9,4 +9,3 @@ class CentroTreinamentoModel(BaseModel):
     nome = Column(String(50), unique=True, nullable=False)
     endereco = Column(String(60), nullable=False)
     proprietario = Column(String(30), nullable=False)
-    atletas = relationship('AtletaModel', back_populates='centro_treinamento')
