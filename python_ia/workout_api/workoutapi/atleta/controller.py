@@ -9,6 +9,7 @@ from sqlalchemy.orm import joinedload
 from typing import List, Optional
 from centro_treinamento.models import CentroTreinamentoModel
 from contrib.dependencies import DataBaseDependency
+from fastapi_pagination import paginate, Page
 
 router = APIRouter()
 
@@ -74,13 +75,13 @@ async def post(
     '/', 
     summary='Consultar todos os atletas',
     status_code=status.HTTP_200_OK,
-    response_model=List[AtletaRestrito]  # List ao invés de list()
+    response_model=Page[AtletaRestrito]  # List ao invés de list()
 )
 async def query_all(
     db_session: DataBaseDependency,
     nome: Optional[str] = Query(None, description='Filtrar por nome do atleta'),
-    cpf: Optional[str] = Query(None, description='Filtrar por CPF do atleta')
-):  
+    cpf: Optional[str] = Query(None, description='Filtrar por CPF do atleta'),
+) -> Page[AtletaRestrito]:  
     query = select(AtletaModel).options(joinedload(AtletaModel.categoria), joinedload(AtletaModel.centro_treinamento))
 
     if nome:
@@ -92,7 +93,7 @@ async def query_all(
     result = await db_session.execute(query)
     atletas = result.scalars().all()
 
-    return atletas
+    return paginate(atletas)
     
 
 @router.get(
