@@ -1,4 +1,4 @@
-from fastapi import APIRouter, status, Body, HTTPException
+from fastapi import APIRouter, status, Body, HTTPException, Query
 from atleta.schemas import AtletaIn, AtletaOut, AtletaUpdate, AtletaRestrito
 from atleta.models import AtletaModel
 from sqlalchemy.future import select
@@ -6,7 +6,7 @@ from datetime import datetime
 from uuid import uuid4, UUID
 from categorias.models import CategoriaModel
 from sqlalchemy.orm import joinedload
-from typing import List
+from typing import List, Optional
 from centro_treinamento.models import CentroTreinamentoModel
 from contrib.dependencies import DataBaseDependency
 
@@ -77,11 +77,19 @@ async def post(
     response_model=List[AtletaRestrito]  # List ao invés de list()
 )
 async def query_all(
-    db_session: DataBaseDependency
+    db_session: DataBaseDependency,
+    nome: Optional[str] = Query(None, description='Filtrar por nome do atleta'),
+    cpf: Optional[str] = Query(None, description='Filtrar por CPF do atleta')
 ):  
-    result = await db_session.execute(
-        select(AtletaModel).options(joinedload(AtletaModel.categoria), joinedload(AtletaModel.centro_treinamento))
-    )
+    query = select(AtletaModel).options(joinedload(AtletaModel.categoria), joinedload(AtletaModel.centro_treinamento))
+
+    if nome:
+        query = query.filter(AtletaModel.nome.ilike(f'%{nome}%'))
+
+    if cpf:
+        query = query.filter(AtletaModel.cpf == cpf)
+
+    result = await db_session.execute(query)
     atletas = result.scalars().all()
 
     return atletas

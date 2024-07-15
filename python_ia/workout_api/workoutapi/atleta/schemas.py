@@ -1,7 +1,7 @@
 from typing import Annotated, Optional
 from categorias.schemas import CategoriaIn
 from centro_treinamento.schemas import CentroTreinamentoAtleta
-from pydantic import Field, PositiveFloat
+from pydantic import Field, PositiveFloat, UUID4
 from contrib.schemas import BaseSchema, OutMixin
 
 class Atleta(BaseSchema):
@@ -25,6 +25,7 @@ class AtletaUpdate(BaseSchema):
     idade: Optional[int] = Field(None, description='Idade do atleta', example=25)
 
 class AtletaRestrito(BaseSchema):
+    id: Annotated[UUID4, Field(description='Identificador do atleta')]
     nome: Annotated[str, Field(description='Nome do atleta', example='Joao', max_length=50)]
     categoria: Annotated[CategoriaIn, Field(description='Categoria do atleta')]
     centro_treinamento: Annotated[CentroTreinamentoAtleta, Field(description='Centro de treinamento do atleta')]
