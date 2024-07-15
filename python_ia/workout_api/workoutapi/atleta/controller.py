@@ -1,5 +1,5 @@
 from fastapi import APIRouter, status, Body, HTTPException
-from atleta.schemas import AtletaIn, AtletaOut, AtletaUpdate
+from atleta.schemas import AtletaIn, AtletaOut, AtletaUpdate, AtletaRestrito
 from atleta.models import AtletaModel
 from sqlalchemy.future import select
 from datetime import datetime
@@ -72,19 +72,20 @@ async def post(
 
 @router.get(
     '/', 
-    summary='Consultar todas os atletas',
+    summary='Consultar todos os atletas',
     status_code=status.HTTP_200_OK,
-    response_model=List[AtletaOut]  # List ao invés de list()
+    response_model=List[AtletaRestrito]  # List ao invés de list()
 )
 async def query_all(
     db_session: DataBaseDependency
-) -> List[AtletaOut]:  
+):  
     result = await db_session.execute(
         select(AtletaModel).options(joinedload(AtletaModel.categoria), joinedload(AtletaModel.centro_treinamento))
     )
     atletas = result.scalars().all()
 
-    return [AtletaOut.model_validate(atleta) for atleta in atletas]
+    return atletas
+    
 
 @router.get(
     '/{id}', 
